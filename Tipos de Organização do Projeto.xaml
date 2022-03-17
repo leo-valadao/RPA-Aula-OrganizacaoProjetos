@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Tipos_de_Organização_do_Projeto" sap:VirtualizedContainerService.HintSize="1306,1114" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Tipos_de_Organização_do_Projeto" sap:VirtualizedContainerService.HintSize="1280,1667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="32">
+    <scg:List x:TypeArguments="x:String" Capacity="22">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System</x:String>
@@ -22,10 +22,11 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>UiPath.Core</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -53,23 +54,23 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Tipos de Organização do Projeto" sap:VirtualizedContainerService.HintSize="1258,1049" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="Tipos de Organização do Projeto" sap:VirtualizedContainerService.HintSize="1290,1602" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment DisplayName="Tipos de Organização do Projeto - Comment" sap:VirtualizedContainerService.HintSize="1216,380" sap2010:WorkflowViewState.IdRef="Comment_1" Text="A organização dos projetos pode seguir 3 tipos de Layouts:&#xA;&#xA;1 - Sequence: Organização do Layout feita por bloco (caixas) de forma simples e sequencial.&#xA;&#xA;2 - Flowcharts: Organizalção do Layout feita por fluxogramas usando setas, condições e interruptores (switches).&#xA;&#xA;3 - State Machines: Organizalção do Layout feita por um número finito de estados pré-definidos, tendo entradas, saídas, condições e finalização. &#xA;&#xA;Observação: O State Machine não devem ser muito usados no projeto, devendo ser apenas o esqueleto do mesmo." />
-    <Parallel DisplayName="Tipos de Organização do Projeto - Parallel" sap:VirtualizedContainerService.HintSize="1216,129" sap2010:WorkflowViewState.IdRef="Parallel_1">
-      <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:Comment DisplayName="Tipos de Organização do Projeto - Comment" sap:VirtualizedContainerService.HintSize="1248,380" sap2010:WorkflowViewState.IdRef="Comment_1" Text="A organização dos projetos pode seguir 3 tipos de Layouts:&#xA;&#xA;1 - Sequence: Organização do Layout feita por bloco (caixas) de forma simples e sequencial.&#xA;&#xA;2 - Flowcharts: Organizalção do Layout feita por fluxogramas usando setas, condições e interruptores (switches).&#xA;&#xA;3 - State Machines: Organizalção do Layout feita por um número finito de estados pré-definidos, tendo entradas, saídas, condições e finalização. &#xA;&#xA;Observação: O State Machine não devem ser muito usados no projeto, devendo ser apenas o esqueleto do mesmo." />
+    <Parallel DisplayName="Tipos de Organização do Projeto - Parallel" sap:VirtualizedContainerService.HintSize="1248,682" sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <Sequence sap:VirtualizedContainerService.HintSize="200,636" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Sequence>
-      <Flowchart sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <Flowchart sap:VirtualizedContainerService.HintSize="200,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -125,10 +126,10 @@
         <x:Reference>__ReferenceID0</x:Reference>
         <x:Reference>__ReferenceID1</x:Reference>
       </Flowchart>
-      <StateMachine InitialState="{x:Reference __ReferenceID4}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+      <StateMachine InitialState="{x:Reference __ReferenceID7}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="StateMachine_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <x:Double x:Key="StateContainerWidth">600</x:Double>
@@ -136,7 +137,14 @@
             <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <State x:Name="__ReferenceID4" DisplayName="State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_1">
+        <State x:Name="__ReferenceID7" DisplayName="Dinheiro Disponível - State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_1">
+          <State.Entry>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Dinheiro Disponível - Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Digite quanto dinheiro disponível você tem:" Title="Dinheiro Disponível">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:Double">[dinheiroDisponivel]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+          </State.Entry>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">233,127.5</av:Point>
@@ -145,32 +153,218 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <State.Transitions>
-            <Transition DisplayName="T1" sap2010:WorkflowViewState.IdRef="Transition_2">
+            <Transition DisplayName="T1" sap2010:WorkflowViewState.IdRef="Transition_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:PointCollection x:Key="ConnectorLocation">300,188.5 300,288.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">300,188.5 300,258.5</av:PointCollection>
                   <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                   <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Transition.To>
-                <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
+                <State x:Name="__ReferenceID4" DisplayName="Escolher Produto - State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_3">
+                  <State.Entry>
+                    <Sequence sap:VirtualizedContainerService.HintSize="695,733" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InputDialog Options="{x:Null}" DisplayName="Selecione o Produto - Input Dialog" sap:VirtualizedContainerService.HintSize="653,291" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Selecione um produto disponível:" OptionsString="1 - Café R$ 1.50;2 - Chá R$ 2.50;3 - Coca-Cola R$ 5.00;Nenhum Produto" Title="Produtos Disponíveis">
+                        <ui:InputDialog.Result>
+                          <OutArgument x:TypeArguments="x:String">[produtoEscolhido]</OutArgument>
+                        </ui:InputDialog.Result>
+                      </ui:InputDialog>
+                      <If Condition="[produtoEscolhido = &quot;Nenhum Produto&quot;]" DisplayName="Produto Escolhido = Nenhum Produto? - If" sap:VirtualizedContainerService.HintSize="653,310" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="Escolha - Assign" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[escolha]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="Valor do Produto - Assign" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Double">[valorProduto]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(Split(produtoEscolhido, "$ ")(1).Trim)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </State.Entry>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">233,288.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">233,258.5</av:Point>
                       <av:Size x:Key="ShapeSize">134,61</av:Size>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <State.Transitions>
+                    <Transition DisplayName="T2" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:PointCollection x:Key="ConnectorLocation">300,319.5 300,369.5</av:PointCollection>
+                          <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+                          <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Transition.Condition>
+                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="escolha = False" />
+                      </Transition.Condition>
+                      <Transition.To>
+                        <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
+                          <State.Entry>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Processo Finalizado - Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Processo Finalizado&quot;]" />
+                          </State.Entry>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">233,369.5</av:Point>
+                              <av:Size x:Key="ShapeSize">134,61</av:Size>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </State>
+                      </Transition.To>
+                    </Transition>
+                    <Transition DisplayName="Negado" sap2010:WorkflowViewState.IdRef="Transition_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:PointCollection x:Key="ConnectorLocation">233,289 143,289</av:PointCollection>
+                          <x:Int32 x:Key="SrcConnectionPointIndex">37</x:Int32>
+                          <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Transition.Condition>
+                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="valorProduto &gt; dinheiroDisponivel" />
+                      </Transition.Condition>
+                      <Transition.To>
+                        <State x:Name="__ReferenceID5" DisplayName="Venda Negada - State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_4">
+                          <State.Entry>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Venda Negada - Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;ERRO! O valor do produto é maior que o dinheiro disponível!&quot;]" />
+                          </State.Entry>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">9,258.5</av:Point>
+                              <av:Size x:Key="ShapeSize">134,61</av:Size>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <State.Transitions>
+                            <Transition DisplayName="T3" sap2010:WorkflowViewState.IdRef="Transition_8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:PointCollection x:Key="ConnectorLocation">76,319.5 76,406.1 233,406.1</av:PointCollection>
+                                  <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+                                  <x:Int32 x:Key="DestConnectionPointIndex">45</x:Int32>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Transition.To>
+                                <x:Reference>__ReferenceID3</x:Reference>
+                              </Transition.To>
+                            </Transition>
+                          </State.Transitions>
+                        </State>
+                      </Transition.To>
+                    </Transition>
+                    <Transition DisplayName="Aceito" sap2010:WorkflowViewState.IdRef="Transition_10">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:PointCollection x:Key="ConnectorLocation">367,289 447,289</av:PointCollection>
+                          <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
+                          <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Transition.Condition>
+                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="valorProduto &lt;= dinheiroDisponivel" />
+                      </Transition.Condition>
+                      <Transition.To>
+                        <State x:Name="__ReferenceID6" DisplayName="Venda Aceita - State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_5">
+                          <State.Entry>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,276" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="Dinheiro Disponível - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Double">[dinheiroDisponivel]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Double">[dinheiroDisponivel-valorProduto]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Venda Aceita - Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Venda realizada!&quot;+Environment.NewLine+&quot;Saldo Disponível: &quot;+dinheiroDisponivel.ToString]" />
+                            </Sequence>
+                          </State.Entry>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">447,258.5</av:Point>
+                              <av:Size x:Key="ShapeSize">134,61</av:Size>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <State.Transitions>
+                            <Transition DisplayName="T4" sap2010:WorkflowViewState.IdRef="Transition_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:PointCollection x:Key="ConnectorLocation">493.9,319.5 493.9,349.5 340.2,349.5 340.2,319.5</av:PointCollection>
+                                  <x:Int32 x:Key="SrcConnectionPointIndex">27</x:Int32>
+                                  <x:Int32 x:Key="DestConnectionPointIndex">63</x:Int32>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Transition.To>
+                                <x:Reference>__ReferenceID4</x:Reference>
+                              </Transition.To>
+                            </Transition>
+                          </State.Transitions>
+                        </State>
+                      </Transition.To>
+                    </Transition>
+                  </State.Transitions>
                 </State>
               </Transition.To>
             </Transition>
           </State.Transitions>
         </State>
         <x:Reference>__ReferenceID3</x:Reference>
+        <x:Reference>__ReferenceID4</x:Reference>
+        <x:Reference>__ReferenceID5</x:Reference>
+        <x:Reference>__ReferenceID6</x:Reference>
+        <StateMachine.Variables>
+          <Variable x:TypeArguments="x:Double" Name="dinheiroDisponivel" />
+          <Variable x:TypeArguments="x:String" Name="produtoEscolhido" />
+          <Variable x:TypeArguments="x:Boolean" Name="escolha">
+            <Variable.Default>
+              <Literal x:TypeArguments="x:Boolean" Value="True" />
+            </Variable.Default>
+          </Variable>
+          <Variable x:TypeArguments="x:Double" Name="valorProduto" />
+        </StateMachine.Variables>
       </StateMachine>
     </Parallel>
-    <Parallel DisplayName="Quando Usar? Vantagens e Desvantagens - Parallel" sap:VirtualizedContainerService.HintSize="1216,368" sap2010:WorkflowViewState.IdRef="Parallel_2">
+    <Parallel DisplayName="Quando Usar? Vantagens e Desvantagens - Parallel" sap:VirtualizedContainerService.HintSize="1248,368" sap2010:WorkflowViewState.IdRef="Parallel_2">
       <ui:Comment DisplayName="Sequence - Comment" sap:VirtualizedContainerService.HintSize="334,322" sap2010:WorkflowViewState.IdRef="Comment_2" Text="Quando Usar? Usar quando uma sequência de passos clara e simples sem muitas condições.&#xA;&#xA;Vantagem: Fácil de entender e seguir, indo de cima para baixo.&#xA;&#xA;Desvantagem: Colocar muitas sequências uma dentro de outra torna o processo difícil de se ler." />
       <ui:Comment DisplayName="Flowcharts - Comment" sap:VirtualizedContainerService.HintSize="334,322" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Quando Usar? Quando houver um fluxo de atividades mais complexo e com muitas condições.&#xA;&#xA;Vantagens: Fácil de entender e com possibilidade de várias ramificações.&#xA;&#xA;Desvantagens: Somente deve ser usado para o Layout generalizado, usando Sequences na parte interna para realizar as atividades reais." />
       <ui:Comment DisplayName="State Machine - Comment" sap:VirtualizedContainerService.HintSize="334,322" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Quando Usar? Usado quando houver um número de estados claros e estáveis na execução, por exemplo: máquinas de vendas ou semáforos.&#xA;&#xA;Vantagens: Usado para fluxogramsa contínuos e mais complexos, tendo transições entre estado facilmente definidas e flexívei. Pode acomodar processos mais complexos e mais fácil de acomodar todos os casos possíveis.&#xA;&#xA;Desvantagens: Tempo de desenvolvimento muito maior devido a complexidade, separando o processo entre estados lógicos, preparação das transições e assim en diante." />

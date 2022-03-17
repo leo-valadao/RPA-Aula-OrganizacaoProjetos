@@ -3,7 +3,7 @@
   "description": "Aula sobre Organização dos Projetos para a FIEB.",
   "main": "Main.xaml",
   "dependencies": {
-    "Calculador.IMC": "[1.0.2]",
+    "Biblioteca.de.Demonstração": "[1.0.1]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.3]",
     "UiPath.System.Activities": "[21.10.4]",
