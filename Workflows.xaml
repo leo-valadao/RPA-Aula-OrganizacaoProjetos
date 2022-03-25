@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Workflows" sap:VirtualizedContainerService.HintSize="390,91" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Workflows" sap:VirtualizedContainerService.HintSize="692,683" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -21,6 +21,8 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>UiPath.Core</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -51,12 +53,18 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Workflows" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence DisplayName="Workflows" sap:VirtualizedContainerService.HintSize="376,618" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="TextoIMC" />
       <Variable x:TypeArguments="x:Double" Name="IMC" />
+      <Variable x:TypeArguments="x:String" Name="usuario" />
+      <Variable x:TypeArguments="x:String" Name="senha" />
+      <Variable x:TypeArguments="x:String" Name="texto" />
+      <Variable x:TypeArguments="x:String" Name="texto2" />
+      <Variable x:TypeArguments="s:DateTime" Name="dataInicioRobo" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -75,12 +83,20 @@
     </Assign>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Calculador IMC workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Calculador IMC.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:Double" x:Key="out_IMC">[IMC]</OutArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="in_Peso" />
-        <InArgument x:TypeArguments="x:Double" x:Key="in_Altura" />
-        <InOutArgument x:TypeArguments="x:String" x:Key="io_TextoIMC">[TextoIMC]</InOutArgument>
+        <OutArgument x:TypeArguments="x:Double" x:Key="out_IMC">
+          <mva:VisualBasicReference x:TypeArguments="x:Double" ExpressionText="IMC" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_Peso">
+          <Literal x:TypeArguments="x:Double" Value="75" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_Altura">
+          <Literal x:TypeArguments="x:Double" Value="1.82" />
+        </InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_TextoIMC">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="TextoIMC" />
+        </InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[IMC.ToString]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[TextoIMC]" />
   </Sequence>
 </Activity>
